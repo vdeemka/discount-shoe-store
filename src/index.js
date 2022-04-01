@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import {BrowserRouter as Router} from 'react-router-dom'
+// import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {ShoeProvider} from './context'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <ShoeProvider>
+    <Router>
+        <App />
+    </Router>    
+   </ShoeProvider>,  
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
